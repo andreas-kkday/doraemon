@@ -1,5 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/android
 
+#gradle jar
+gradle/wrapper/gradle-wrapper.jar
 ### Mac ###
 .DS_Store
 
