@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.ir.backend.js.compile
 
 plugins {
     kotlin("jvm") version "1.6.20"
@@ -13,13 +12,6 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
-    implementation("com.google.code.gson:gson:2.9.0")
-
-
-}
-
 tasks.test {
     useJUnitPlatform()
 }
@@ -30,4 +22,9 @@ tasks.withType<KotlinCompile> {
 
 application {
     mainClass.set("MainKt")
+
+    dependencies {
+        testImplementation(kotlin("test"))
+        implementation("com.google.code.gson:gson:2.9.0")
+    }
 }
